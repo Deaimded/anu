@@ -1,6 +1,6 @@
 env:
 # ENCRYPTED
-  CLONE: "ENCRYPTED[6c74e8bcae2eaf0be45db28ee7cfddfcbc1ebceae0e5c5812c5caecd9b7465f46581dda216bb82efe4a0b61edeb5e053]"
+  CLONE: "ENCRYPTED[8069b89d910d6582970f63985eb6d6606f2b9d56e1b6c638b3695f66b188562730c73703052136fec902d3dadaecd83c]"
 
 # FLAG
   WORKDIR: "/usr/src/app"
@@ -12,8 +12,8 @@ task:
   timeout_in: 100m
   container:
     image: gengkapak/app:latest
-    cpu: 8
-    memory: 32G
+    cpu: 4
+    memory: 16G
     
   RUN:
      - ./start.sh
