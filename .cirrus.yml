@@ -1,0 +1,19 @@
+env:
+# ENCRYPTED
+  CLONE: "ENCRYPTED[6c74e8bcae2eaf0be45db28ee7cfddfcbc1ebceae0e5c5812c5caecd9b7465f46581dda216bb82efe4a0b61edeb5e053]"
+
+# FLAG
+  WORKDIR: "/usr/src/app"
+  CIRRUS_CLONE_DEPTH: "1"
+
+task:
+  name: "Setting Up, Syncing, Building and Uploading"
+  only_if: $CIRRUS_REPO_OWNER == 'Deaimded'
+  timeout_in: 100m
+  container:
+    image: gengkapak/app:latest
+    cpu: 8
+    memory: 32G
+    
+  RUN:
+     - ./start.sh
