@@ -14,6 +14,4 @@ task:
     image: gengkapak/app:latest
     cpu: 4
     memory: 16G
-    
-  RUN:
-     - ./start.sh
+  RUN: ./start.sh
